@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mod02Exer02Modified.View.LoginPage"
+             Title="LoginPage">
+
+    <ContentPage.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#FFA726" Offset="0.0" />
+                <GradientStop Color="#FF7043" Offset="1.0" />
+            </LinearGradientBrush>
+        </ContentPage.Background>
+
+        <VerticalStackLayout
+            Padding="30"
+            Spacing="20"
+            VerticalOptions="CenterAndExpand"
+            HorizontalOptions="CenterAndExpand">
+
+            <Label 
+            Text="Welcome! Please log in." 
+            FontSize="28" 
+            FontAttributes="Bold" 
+            HorizontalOptions="Center" 
+            VerticalOptions="Start"/>
+
+            <Entry 
+            x:Name="UsernameEntry"
+            Placeholder="Username" 
+            FontSize="18"
+            HeightRequest="50"
+            Margin="0,10,0,0"
+            BackgroundColor="#FFCCBC"
+            TextColor="Black"
+            PlaceholderColor="Gray"
+            HorizontalOptions="FillAndExpand"/>
+
+            <Entry 
+            x:Name="PasswordEntry"
+            Placeholder="Password" 
+            IsPassword="True" 
+            FontSize="18"
+            HeightRequest="50"
+            BackgroundColor="White"
+            TextColor="Black"
+            PlaceholderColor="Gray"
+            HorizontalOptions="FillAndExpand"/>
+
+            <Button 
+            Text="Login" 
+            Clicked="OnLoginButtonClicked"
+            BackgroundColor="LightBlue" 
+            TextColor="White"
+            FontAttributes="Bold"
+            CornerRadius="25"
+            HeightRequest="50"
+            WidthRequest="200"
+            HorizontalOptions="Center"
+            Margin="0,20,0,0"/>
+
+            <Label 
+            Text="{Binding ErrorMessage}" 
+            TextColor="Red" 
+            FontSize="16" 
+            HorizontalOptions="Center"
+            VerticalOptions="EndAndExpand"/>
+
+        </VerticalStackLayout>
+</ContentPage>

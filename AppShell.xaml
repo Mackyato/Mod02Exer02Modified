@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Mod02Exer02Modified.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:Mod02Exer02Modified.View"
+    Shell.FlyoutBehavior="Disabled"
+    Title="Mod02Exer02Modified">
+
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate views:DashboardPage}"
+        Route="DashboardPage" />
+
+    <ShellContent
+        Title="Offline"
+        ContentTemplate="{DataTemplate views:OfflinePage}"
+        Route="OfflinePage" />
+
+    <ShellContent
+        Title="Start"
+        ContentTemplate="{DataTemplate views:LoginPage}"
+        Route="LoginPage" />
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate views:EmployeePage}"
+        Route="EmployeePage" />
+
+</Shell>
